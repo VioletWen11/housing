@@ -16,8 +16,8 @@ st.subheader('see more filters in the sidebar')
 # create a multi select
 ocean_proximity_filter = st.sidebar.multiselect(
      'Ocean_proximity Selector',
-     df.ocean_proximity.unique(),  # options
-     df.ocean_proximity.unique())  # defaults
+     ['NEAR BAY', '<1H OCEAN', 'INLAND', 'NEAR OCEAN', 'ISLAND' ],  # options
+     ['NEAR BAY', '<1H OCEAN', 'INLAND', 'NEAR OCEAN', 'ISLAND' ])  # defaults
 df = df[df.ocean_proximity.isin(ocean_proximity_filter)]
 
 # a radio button widget to filter by income level, Low (≤2.5), Medium (> 2.5 & < 4.5), High (> 4.5)
