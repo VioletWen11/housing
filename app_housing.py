@@ -7,9 +7,9 @@ st.title('California Housing Data(1990) by Violet')
 df = pd.read_csv('housing.csv')
 
 # add a slider
-housing_value_filter = st.slider('Minimal Midian Housing Value (Millions):', 0.0, 500001.0, 20000.0)
+housing_value_filter = st.slider('Maximal Midian Housing Value (Millions):', 0.0, 500001.0, 20000.0)
 # filter by median_house_value 
-df = df[df.median_house_value >= housing_value_filter]
+df = df[df.median_house_value <= housing_value_filter]
 
 st.subheader('see more filters in the sidebar')
 
