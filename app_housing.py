@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-plt.style.use('seaborn')
+plt.style.use('ggplot')
 
 st.title('California Housing Data(1990) by Violet')
 df = pd.read_csv('housing.csv')
